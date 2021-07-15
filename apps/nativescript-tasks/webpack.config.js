@@ -1,24 +1,11 @@
-const webpack = require('@nativescript/webpack');
-const { resolve } = require('path');
+const webpack = require("@nativescript/webpack");
 
 module.exports = (env) => {
 
   webpack.init(env);
-  webpack.useConfig('angular');
 
-  webpack.chainWebpack((config) => {
-    // shared scss
-    config.resolve.alias.set('@nuvious/xplat-scss', resolve(__dirname, '../../libs/xplat/scss/src/'));
-    config.resolve.alias.set('@nuvious/xplat-nativescript-scss', resolve(__dirname, '../../libs/xplat/nativescript/scss/src/'));
-
-    // ignore base env tsconfig warning
-    config.set(
-      'ignoreWarnings',
-      (config.get('ignoreWarnings') || []).concat([
-        /environments\/base/
-      ])
-    );
-  });
+	// Learn how to customize:
+	// https://docs.nativescript.org/webpack
 
   return webpack.resolveConfig();
 };
