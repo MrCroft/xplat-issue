@@ -8,5 +8,9 @@ module.exports = {
     '<rootDir>/libs/xplat/web/features',
     '<rootDir>/libs/xplat/web/scss',
     '<rootDir>/apps/web-tasks',
+    '<rootDir>/libs/xplat/nativescript/scss',
+    '<rootDir>/libs/xplat/nativescript/utils',
+    '<rootDir>/libs/xplat/nativescript/core',
+    '<rootDir>/libs/xplat/nativescript/features',
   ],
 };

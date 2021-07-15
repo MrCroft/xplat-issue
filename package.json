@@ -24,7 +24,17 @@
     "workspace-generator": "nx workspace-generator",
     "dep-graph": "nx dep-graph",
     "help": "nx help",
-    "postinstall": "ngcc --properties es2015 browser module main"
+    "postinstall": "ngcc --properties es2015 browser module main",
+    "start:ios": "cd apps/nativescript-tasks && ns run ios --no-hmr",
+    "start:web-tasks": "nx serve web-tasks",
+    "start:nativescript-tasks.ios": "cd apps/nativescript-tasks && ns run ios --no-hmr",
+    "start:nativescript-tasks.android": "cd apps/nativescript-tasks && ns run android --no-hmr",
+    "debug:nativescript-tasks.ios": "cd apps/nativescript-tasks && ns debug ios --no-hmr --emulator",
+    "debug:nativescript-tasks.android": "cd apps/nativescript-tasks && ns debug android --no-hmr --emulator",
+    "migrate:nativescript": "cd apps/nativescript-tasks && ns migrate",
+    "clean": "npx rimraf hooks node_modules package-lock.json && npm config set ignore-engines true && ns package-manager set npm && npm i",
+    "clean:nativescript-tasks": "cd apps/nativescript-tasks && npx rimraf -- hooks node_modules platforms package-lock.json && npm i && npx rimraf -- package-lock.json",
+    "clean:all": "npm run clean && npm run clean:nativescript-tasks"
   },
   "private": true,
   "dependencies": {
@@ -42,7 +52,11 @@
     "core-js": "^3.6.5",
     "rxjs": "^6.6.0",
     "tslib": "^2.0.0",
-    "zone.js": "~0.11.1"
+    "zone.js": "~0.11.1",
+    "@nativescript/core": "~8.0.0",
+    "nativescript-theme-core": "^1.0.4",
+    "@nativescript/angular": "^12.0.0",
+    "nativescript-ngx-fonticon": "~7.0.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^12.0.0",
@@ -66,11 +80,11 @@
     "@types/jest": "26.0.8",
     "@types/node": "14.14.33",
     "@typescript-eslint/eslint-plugin": "4.19.0",
-    "@typescript-eslint/parser": "4.19.0",
+    "@typescript-eslint/parser": "^4.3.0",
     "codelyzer": "~6.0.0",
     "cypress": "^7.3.0",
     "dotenv": "8.2.0",
-    "eslint": "7.22.0",
+    "eslint": "~7.22.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "jest": "27.0.3",
@@ -79,7 +93,14 @@
     "prettier": "^2.3.1",
     "ts-jest": "27.0.3",
     "ts-node": "~9.1.1",
-    "typescript": "~4.2.4"
+    "typescript": "~4.2.4",
+    "@nstudio/nativescript-angular": "12.5.1",
+    "@nstudio/nativescript": "12.5.1",
+    "sass": "^1.30.0",
+    "@nativescript/types": "~8.0.0",
+    "@nativescript/eslint-plugin": "~0.0.4",
+    "@nativescript/webpack": "beta",
+    "@ngtools/webpack": "^12.0.0"
   },
   "xplat": {
     "prefix": "nuvious",

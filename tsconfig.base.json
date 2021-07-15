@@ -10,20 +10,45 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2017", "dom"],
+    "lib": [
+      "es2017",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nuvious/xplat/core": ["libs/xplat/core/src/index.ts"],
+      "@nuvious/xplat/core": [
+        "libs/xplat/core/src/index.ts"
+      ],
       "@nuvious/xplat/environments": [
         "libs/xplat/core/src/lib/environments/base/index.ts"
       ],
-      "@nuvious/xplat/features": ["libs/xplat/features/src/index.ts"],
-      "@nuvious/xplat/utils": ["libs/xplat/utils/src/index.ts"],
-      "@nuvious/xplat/web/core": ["libs/xplat/web/core/src/index.ts"],
-      "@nuvious/xplat/web/features": ["libs/xplat/web/features/src/index.ts"]
+      "@nuvious/xplat/features": [
+        "libs/xplat/features/src/index.ts"
+      ],
+      "@nuvious/xplat/nativescript/core": [
+        "libs/xplat/nativescript/core/src/index.ts"
+      ],
+      "@nuvious/xplat/nativescript/features": [
+        "libs/xplat/nativescript/features/src/index.ts"
+      ],
+      "@nuvious/xplat/nativescript/utils": [
+        "libs/xplat/nativescript/utils/src/index.ts"
+      ],
+      "@nuvious/xplat/utils": [
+        "libs/xplat/utils/src/index.ts"
+      ],
+      "@nuvious/xplat/web/core": [
+        "libs/xplat/web/core/src/index.ts"
+      ],
+      "@nuvious/xplat/web/features": [
+        "libs/xplat/web/features/src/index.ts"
+      ]
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
